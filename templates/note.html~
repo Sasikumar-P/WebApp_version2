@@ -1,0 +1,185 @@
+
+
+<html>
+<head>
+{% load staticfiles %}
+
+</head>
+<h2>AngularJS Sample Application</h2>
+<div ng-app="myApp" >
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title text-align="center">FOOTBALL FANS </title>
+ {% load staticfiles %}
+<link href="{% static 'css/bootstrap.min.css' %}"
+      rel="stylesheet" media="screen">
+<link href="{% static 'css/bootstrap.css' %}"
+      rel="stylesheet" media="screen">
+<link href="{% static 'css/bootstrap.css.map' %}"
+      rel="stylesheet" media="screen">
+<link href="{% static 'css/bootstrap-theme.css' %}"
+      rel="stylesheet" media="screen">
+<link href="{% static 'css/bootstrap-theme.css.map' %}"
+      rel="stylesheet" media="screen">
+<link href="{% static 'css/bootstrap-theme.min.css' %}"
+      rel="stylesheet" media="screen">
+</head>
+<body class="{% block bodyclass %}{% endblock %}">
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/npm.js' %}"></script>
+ <div class="container">
+	<div class="jumbotron">
+<div class="container">
+<div id="header">
+    <div id="logo">
+      <a href="{% url 'home' %}">
+        <img src="/static/img/thing.jpg" width="1000" height="150" alt="AskHere">
+      </a>
+    </div>
+<div class="container">
+<div class="row-fluid">
+  <div class="span4 text-left"><a href="#" class="btn"></a></div>
+  <div class="span4 text-center"><a href="#" class="btn"></a></div>
+  <div class="span4 text-right"><a href="#" class="btn"></a></div>
+</div>
+</div>
+<div class="row"><div class="col-sm-4">
+<a href="/login/" class="btn btn-info" role="button">LOGIN</a></div>
+<div class="col-sm-4">
+<a href="/new/" class="btn btn-info" role="button">LOGOUT</a></div>
+<div class="col-sm-4">
+<a href="/register/" class="btn btn-info" role="button">REGISTER</a></div>
+</div>
+<div class="row">
+    <a href="pulpitrock.jpg" class="thumbnail">
+      <img src="{% static "img/d.jpg"  %}" alt="Pulpit Rock" style="width:1000px;height:100px">
+                </a>
+</div>
+<div class="row"><div class="col-sm-4">
+<a href="/hello/" class="btn btn-info" role="button">NEXT</a></div>
+<div class="col-sm-4">
+<a href="/new/" class="btn btn-info" role="button">NEW</a></div>
+<div class="col-sm-4">
+<a href="/register/" class="btn btn-info" role="button">INDEX</a></div>
+</div>
+
+ <div class="row">
+  <div class="col-md-4">
+    <a href="pulpitrock.jpg" class="thumbnail">
+      <img src="{% static "img/a.jpg"  %}" alt="Pulpit Rock" style="width:300px;height:150px">
+            
+    </a>
+  </div>
+  <div class="col-md-4">
+    <a href="moustiers-sainte-marie.jpg" class="thumbnail">
+     
+      <img src="{% static "img/b.jpg"  %}" alt="Moustiers Sainte Marie" style="width:300px;height:150px">
+    </a>
+  </div>
+  <div class="col-md-4">
+    <a href="cinqueterre.jpg" class="thumbnail">
+      
+      <img src="{% static "img/c.jpg"  %}" alt="Cinque Terre" style="width:300px;height:150px">
+    </a>
+  </div>
+</div>
+</div>
+<div ng-controller="student6Controller">  
+<form class = "form-horizontal" role = "form" method="post">
+   
+   <div class = "form-group">
+      <label for = "page1" class = "col-sm-2 control-label">PAGE1</label>
+		
+      <div class = "col-sm-10">
+         <input type = "number" class = "form-control" id = "firstname" placeholder = "Enter page1 Here" ng-model="page1">
+      </div>
+   </div>
+   
+   <div class = "form-group">
+      <label for = "page2" class = "col-sm-2 control-label">PAGE2</label>
+		
+      <div class = "col-sm-10">
+         <input type = "number" class = "form-control" id = "lastname" placeholder = "Enter Page2 Here"   ng-model="page2">
+      </div>
+   </div>
+<div class = "form-group">
+      <label for = "page3" class = "col-sm-2 control-label">PAGE3</label>
+		
+      <div class = "col-sm-10">
+         <input type = "number" class = "form-control" id = "firstname" placeholder = "Enter page3 Here" ng-model="page3">
+      </div>
+   </div>
+<div class = "form-group">
+      <label for = "page4" class = "col-sm-2 control-label">PAGE4</label>
+		
+      <div class = "col-sm-10">
+         <input type = "number" class = "form-control" id = "firstname" placeholder = "Enter page4 Here" ng-model="page4">
+      </div>
+   </div>
+   <div class = "form-group">
+      <div class = "col-sm-offset-2 col-sm-10">
+         <button type = "button" class = "btn btn-default" ng-click="pushhh(page)" name="push">PUSH DATA</button>
+      </div>
+</div>
+</form>
+ <div class = "table-responsive">
+   <table class = "table">
+      
+      <caption>Responsive Table Layout</caption>
+      
+      <thead>
+         <tr>
+            <th>PAGE1</th>
+            <th>PAGE3</th>
+            <th>PAGE3</th>
+            <th>PAGE4</th>
+         </tr>
+      </thead>
+      
+      <tbody>
+         <tr ng-repeat="ab in pages">
+{% verbatim %}    
+      <td>{{ab.pages}}</td>
+      <td>{{ ab.pages }}</td>
+      <td>{{ ab.pages}}</td>
+      <td>{{ ab.pages}}</td>
+ {% endverbatim %}
+</tr>
+      </tbody>
+      
+   </table>
+</div>
+
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'css/bootstrap.css' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/html5shim.min.js' %}"></script>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/modernizr.min.js' %}"></script>
+<script src="{% static 'css/bootstrap.css.map' %}"></script>
+<script src="{% static 'css/bootstrap-responsive.css' %}"></script>
+<script src="{% static 'css/bootstrap-theme.css' %}"></script>
+<script src="{% static 'css/bootstrap-theme.css.map' %}"></script>
+<script src="{% static 'css/bootstrap-theme.min.css' %}"></script>
+<script src="{% static 'js/angular.js' %}"></script>
+<script src="{% static 'app.js' %}"></script>
+<script src="{% static 'js/studentController.js' %}"></script>
+<script src="{% static 'js/student2Controller.js' %}"></script>
+<script src="{% static 'js/MyCtrl.js' %}"></script>
+<script src="{% static 'js/Abc.js' %}"></script>
+<script src="{% static 'js/student4Controller.js' %}"></script>
+<script src="{% static 'js/student6Controller.js' %}"></script>
+</body>
+<div id="footer">
+<div class="row">
+ <footer>
+  <p>Posted by: SKP.Guptha</p>
+  <p>Contact information: <a href="skp.guptha@gmail.com">
+ skp.guptha@gmail.com</a>.</p>
+</footer>
+
+</div></div> 
+</html>
